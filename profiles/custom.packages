@@ -1,0 +1,22 @@
+## this file lists packages that will be automatically installed with this profile
+
+#
+libgnutls30
+libgnutls-openssl27
+tasksel
+tasksel-data
+
+# network tools
+sysstat
+tcpdump
+openssl
+ca-certificates
+
+# build tools
+build-essential
+cmake
+git
+vim
+
+# administration tools
+sudo

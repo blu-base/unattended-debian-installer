@@ -1,0 +1,37 @@
+## This file includes packages which are downloaded into the image, but are not necessarily installed
+
+grub-pc
+grub-efi
+
+console-setup
+
+usbutils
+acpi
+acpid
+eject
+
+
+# debian-cd uses debootstrap from the mirror
+debootstrap
+
+syslinux-common
+syslinux
+isolinux
+
+# administration tools
+git
+vim
+sudo
+
+tasksel
+tasksel-data
+debian-installer
+
+openssh-server
+ca-certificates
+
+# build tools
+cmake
+dpkg-dev
+pkg-config
+

@@ -39,7 +39,7 @@ On Debian systems, you need to install:
 * xorriso
 * build-essential
 
-```
+```bash
 apt install xorriso simple-cdd build-essential
 ```
 
@@ -48,7 +48,7 @@ debian container is used to build the image in this case.
 
 E.g. openSUSE:
 
-```
+```bash
 zypper install docker
 ```
 
@@ -73,7 +73,7 @@ automatic installer.
 
 To create the fully automatic installer you need to run this additional step:
 
-```
+```bash
 # create the fully unattended installer
 make build-unattended
 ```
@@ -148,7 +148,7 @@ It must conform the user naming conventions for Linux/Debian.
 ### Additional users via postinstall
 In the post install script `profiles/custom.postinst`, you'll find these lines:
 
-```
+```bash
 echo "adding user user2"
 useradd -g users -m -d /home/user2 -s /bin/bash \
 	-p '$6$hv7Pc6kN8zVOduf7$qHkYL4Pr8/0ozACoadgt5P3WUZtSfQWw0iYYKzCyY4RGCNgwPzA.9VUyGCJnaWAM3mSRS00aRrIRdP0CdPJOo.' user2

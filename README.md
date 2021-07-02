@@ -1,6 +1,6 @@
 # Building an Unattended Debian Installation ISO
 
-The Debian Installer which is run during manual installation can be automized.
+The Debian Installer which is run during manual installation can be automatized.
 This process requires a so-called preseed, which contains answers to the dialogs
 which require input.
 
@@ -17,7 +17,7 @@ _Advanced Options_ > _Automatic Installer_.
 To make a fully automatic installer, you must run an additional build step,
 which is further explained below. The disadvantage of the fully automatic 
 installer is that it will override any partitions according to the preseed---
-whitout confirming! That's why it's left to the discretion of the sysadmin using
+without confirming! That's why it's left to the discretion of the sysadmin using
 this builder.
 
 # Features
@@ -159,7 +159,7 @@ They create an additional user, `user2`, and add this user to the sudo group
 giving this user root control.
 
 In the `useradd` command the password is again set via a hash (`-p` argument 
-followed by the hash string). This default hash correspondes with the password 
+followed by the hash string). This default hash corresponds with the password 
 `insecure`, again. Therefore, this **hash needs to be changed** for a production
 image.
 
@@ -198,7 +198,7 @@ To do both, including and installing, the names of packages need to be added to
 the `profiles/custom.packages` files. The build system will download the 
 packages and its dependencies to the install image.
 
-If you only want to add packages to the intall image, such as for later 
+If you only want to add packages to the install image, such as for later 
 installation, you can add packages into the `profiles/custom.downloads` 
 file.
 
@@ -206,6 +206,6 @@ file.
 
 * [Preseeding](https://wiki.debian.org/DebianInstaller/Preseed)
 * [Simple-CDD HowTo](https://wiki.debian.org/Simple-CDD/Howto)
-* [Debian Handbook on automated installtion](https://debian-handbook.info/browse/squeeze/sect.automated-installation.html)
+* [Debian Handbook on automated installations](https://debian-handbook.info/browse/squeeze/sect.automated-installation.html)
 
 

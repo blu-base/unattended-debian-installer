@@ -21,7 +21,7 @@ usermod -a -G sudo user2
 # store extras into /tmp
 echo "extracting extras directory to /tmp"
 cd /tmp
-tar -xzf /media/cdrom/simple-cdd/extras.tar.gz
+tar -pxzf /media/cdrom/simple-cdd/extras.tar.gz
 
 ######### Accel-ppp ############################################################
 # this is an example for a post install compilation

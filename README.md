@@ -49,7 +49,8 @@ downloaded, up to 1Gb.
 
 On Debian systems, you should use the docker based build system as well.
 However, you can skip this build step and use the host system. This is not
-recommended. Anyhow, you'd nee to install these packages:
+recommended, though. But if you want to do it anyway, you'd need to install 
+these packages:
 * simple-cdd
 * xorriso
 * build-essential

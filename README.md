@@ -34,17 +34,8 @@ this builder.
 # Build system requirements
 You need the following packages in order to run the build system for this image:
 
-On Debian systems, you need to install:
-* simple-cdd
-* xorriso
-* build-essential
-
-```bash
-apt install xorriso simple-cdd build-essential
-```
-
-On other non-debian-based distributions you need to install `docker(.io)`. A
-debian container is used to build the image in this case.
+On Non-Debian-based distributions you need to install `docker(.io)`. A
+Debian container is used to build the image in this case.
 
 E.g. openSUSE:
 
@@ -56,13 +47,32 @@ You'll also need about 2G free space in the build system directory and a
 fast internet connection, since there are many packages which need to be
 downloaded, up to 1Gb.
 
+On Debian systems, you need to install:
+* simple-cdd
+* xorriso
+* build-essential
+
+```bash
+apt install xorriso simple-cdd build-essential
+```
+
+
 # Build the image
+
+## Check postinstall script
+Make sure your `.postinst` script has executable permissions!
+If it does not have executable rights add them via:
+
+```bash
+chmod u+x profiles/custom.postinst
+```
+
 ## Non-Debian host
-On non-debian systems you need to create a docker container (which is Debian) in
+On non-Debian systems you need to create a docker container (which is Debian) in
 order to build the Debian installer image. To create the ISO image run:
 
 ```bash
-# this will set up a simple debian container and bring you in
+# this will set up a simple Debian container and bring you in
 make image
 
 # run the iso building process
@@ -79,9 +89,8 @@ make build-unattended
 ```
 This will create the file `images/fully-unattended-install.iso`.
 
-The default logins are `root` with the password  `insecure`, `debian`, and 
-`user2`, each with the password `insecure`. See in common task how to change 
-these default passwords!
+The default logins accounts are `root`, `debian`, and `user2`, each with the 
+password `insecure`. See in common task how to change these default passwords!
 
 ## On Debian host
 For a Debian host system, it is optional to create a docker container. However,

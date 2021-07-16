@@ -47,7 +47,9 @@ You'll also need about 2G free space in the build system directory and a
 fast internet connection, since there are many packages which need to be
 downloaded, up to 1Gb.
 
-On Debian systems, you need to install:
+On Debian systems, you should use the docker based build system as well.
+However, you can skip this build step and use the host system. This is not
+recommended. Anyhow, you'd nee to install these packages:
 * simple-cdd
 * xorriso
 * build-essential

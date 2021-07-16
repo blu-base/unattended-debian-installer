@@ -7,7 +7,7 @@ all: clean clean
 	docker exec -it image-builder make build
 
 build:
-	tar -czf extras.tar.gz extras/
+	tar -pczf extras.tar.gz extras/
 	build-simple-cdd --conf custom.conf --auto-profiles custom --locale en_US --keyboard us --force-root --force-preseed
 	rm extras.tar.gz
 
